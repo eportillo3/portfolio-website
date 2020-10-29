@@ -17,9 +17,16 @@ body {
   line-height: 1.6;
 }
 
-h1 {
+#main-header {
+  text-align: left;
+}
+
+h1
+ {
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
 }
 
 h2 {
@@ -33,6 +40,10 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
+}
+
+p {
+  font-family: Merriweather;
 }
 
 button, .button {
