@@ -325,6 +325,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   flex-direction: column;
   text-align: center;
   margin-top: 100px;
+  margin-bottom: 65px;
 }
 
 /* animations */
