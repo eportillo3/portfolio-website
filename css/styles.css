@@ -1,7 +1,8 @@
-:root {--primary-color: #00587a;
+:root {
+  --primary-color: #00587a;
   --secondary-color: lightgray;
---white-font-color: #fff;
---black-font-color: #000;
+  --white-font-color: #fff;
+  --black-font-color: #000;
 }
 
 * {
@@ -21,17 +22,18 @@ body {
   text-align: left;
 }
 
-h1
- {
-  font-size: 30px;
+h1 {
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
   color: var(--primary-color);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
+  font-family: Oswald;
+  text-align: center;
 }
 
 a {
@@ -48,14 +50,15 @@ p {
 
 button, .button {
   border: none;
-  font-family: inherit;
+  font-family: Merriweather;
   background-color: var(--primary-color);
   color: var(--white-font-color);
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 4px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
+  outline: none;
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
@@ -105,14 +108,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 /* For the about page */
-.about-header {
+.about-header, .my-bio {
   text-align: center;
 }
 
-.container {
+/* .container {
   text-align: center;
-}
-
+} */
 .table {
   margin: auto;
 }
@@ -121,11 +123,165 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-align: center;
 }
 
-/* Contact Form section */
-.contact__form {
-  text-align: center;
+.skills-box {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: Oswald;
+  height: 650px;
 }
 
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%
+}
+
+.skill {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.skill-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  height: 25px;
+  /* z-index: -1; */
+  border-radius: 100px;
+  position: absolute;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.skill-fill {
+  background: #00fff1;
+  height: 25px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.skill-percent {
+  font-size: 30px;
+}
+
+.html {
+  animation: html 2s;
+  width: 70%;
+}
+
+.css {
+  animation: css 2s;
+  width: 60%;
+}
+
+.js {
+  animation: js 2s;
+  width: 30%;
+}
+
+.sql {
+  animation: sql 2s;
+  width: 40%;
+}
+
+@keyframes html {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes css {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 30%;
+  }
+}
+
+@keyframes sql {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 40%;
+  }
+}
+
+/* Contact Form section */
+/* .contact__form {
+  text-align: center;
+} */
+
+.box {
+  background: var(--secondary-color);
+  width: 270px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+}
+
+.box input {
+  height: 35px;
+  width: 100%;
+  padding-left: 5%;
+  margin-top: 20px;
+  background: #f6f6f6;
+  border: none;
+  font-family: Merriweather;
+  border-radius: 4px;
+  outline: none;
+}
+
+.box textarea {
+  height: 90px;
+  width: 100%;
+  padding: 10px 5%;
+  margin-top: 20px;
+  background: #f6f6f6;
+  border: none;
+  border-radius: 4px;
+  font-family: Merriweather;
+  outline: none;
+  resize: none;
+}
+
+.box button {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+  /* background: linear-gradient(to left, #00E2FF, #0695FE); */
+  border: none;
+  border-radius: 4px;
+  font-family: Merriweather;
+  outline: none;
+  color: #fff;
+}
 
 /* work section */
 .grid {
@@ -138,7 +294,6 @@ button:hover, button:focus, .button:hover, .button:focus {
   background-color: var(--secondary-color);
 } */
 /* start grid fallback */
-
 .grid__item {
   background-color: var(--secondary-color);
   display: inline-block;
@@ -146,7 +301,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 /* end grid fallback */
-
 @supports (display: grid) {
   .grid {
     display: grid;
@@ -170,12 +324,10 @@ button:hover, button:focus, .button:hover, .button:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 100px;
 }
 
 /* animations */
-
-
-
 /* #path845, #path855 {
   animation: color-change 1s linear infinite;
   animation-duration: 20s;
@@ -200,8 +352,6 @@ button:hover, button:focus, .button:hover, .button:focus {
     fill: #f76414;
   }
 } */
-
-
 #path845, #path855, #path849, #path853 {
   animation: spin 1s linear infinite;
   animation-duration: 20s;
@@ -224,7 +374,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 /* screen sizing */
-
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
